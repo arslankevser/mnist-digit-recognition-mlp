@@ -41,8 +41,8 @@ Model tam olarak **24.89 saniye** süren 10 epoch'luk bir eğitim sürecinden ge
 Elde edilen bu metrikler, modelin öğrenme ve genelleme kapasitesi hakkında şu sonuçları ortaya koymaktadır:
 - Modelin eğitim verisinde %98.20 doğruluğa ve 0.0564 gibi çok düşük bir kayıp (loss) değerine ulaşması, kurulan MLP mimarisinin veri setindeki örüntüleri öğrenmek için fazlasıyla yeterli olduğunu göstermektedir.
 - Doğrulama (Validation) başarısının %96.88 ve nihai Test başarısının %97.00 çıkması, modelin sadece eğitim verisini ezberlemediğini, daha önce hiç görmediği veriler üzerinde de oldukça yüksek bir başarıyla çalıştığını kanıtlamaktadır.
-- 10. epoch itibarıyla Training Loss (0.0564) ile Validation Loss (0.1175) arasında açılmaya başlayan fark, modelin bu noktadan sonra eğitilmeye devam etmesi halinde aşırı öğrenmeye (overfitting) gidebileceğinin erken bir sinyalidir. Bu nedenle 10 epoch'luk sınır, performansı zirvede yakalamak için ideal bir durdurma noktası olmuştur.
-
+- Son (10.) epoch itibarıyla Training Loss (0.0564) ile Validation Loss (0.1175) arasında açılmaya başlayan fark, modelin bu noktadan sonra eğitilmeye devam etmesi halinde aşırı öğrenmeye (overfitting) gidebileceğinin erken bir sinyalidir. Bu nedenle 10 epoch'luk sınır, performansı zirvede yakalamak için ideal bir durdurma noktası olmuştur.
+  
 ### Hiperparametre Değişikliklerinin Etkisi (Analiz)
 Model geliştirme sürecinde hiperparametrelerin performansa etkisi gözlemlenmiştir:
 - **Optimizer Seçimi (SGD vs. Adam):** İlk denemelerde SGD kullanıldığında modelin öğrenme hızı yavaş kalırken, Adam optimizer'a geçildiğinde çok daha hızlı yakınsama (convergence) sağlanmış ve daha düşük epoch sayılarında yüksek doğruluğa ulaşılmıştır.
